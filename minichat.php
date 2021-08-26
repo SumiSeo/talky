@@ -30,33 +30,43 @@
      <section>
    
         <aside>
-            <div class="friends">
-                12
+            <div class="user__lists">
+            <?php 
+                include("showUsers.php")
+            ?>
             </div>
+            <!-- <div class="friends">
+                <div class="friend__box">
+                    <div class=friend__img></div>
+                    <div class="friend__info">
+                        <h6 class="friend__login">Marcus</h6>
+                        <div class="friend__message">Hello<hi/div>
+                    </div>
+                </div>
+            </div> -->
         </aside>
         <article>
             <form action="minichat_post.php" method="post">
                 <div class="username__box">
-                    <label  for="username">Username : </label>
+                    <label  for="username">Name :</label>
                     <input 
                     value = <?php echo $username;?>
                     class="username" id="username" name="username"type="text">
+                    <input class="submit" value="send" type="submit">
+                    <input class="reset" class="reset" value="reset" type="reset">
+                </div>
+                <div>
+                    
                 </div>
                 <div class="message__box">
-                    <label for="message">Message</label>
-                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    <label for="message"></label>
+                    <textarea name="message" id="message" cols="105" rows="30"></textarea>
                 </div>
-        
-                <input class="submit" value="send" type="submit">
-                <input class="reset" class="reset" value="reset" type="reset">
+                
             </form>
         </article>
     </section>   
-        <div class="user__lists">
-        <?php 
-            include("showUsers.php")
-        ?>
-        </div>
+       
        
     </main>
 <script src="index.js"></script>

@@ -13,12 +13,15 @@ body {
 }
 
 main {
-  margin: 0 auto;
-  margin-top: 50px;
+  margin: 50px auto;
   width: 80%;
   border-radius: 20px;
   overflow: hidden;
   background-color: #f9f5f3;
+  height: 120vh;
+}
+aside {
+  height: 120vh;
 }
 
 .logo {
@@ -45,18 +48,19 @@ nav ul li {
   padding: 0;
   margin: 0;
 }
-
+li {
+  transition: all 0.2s ease-in;
+}
 li:not(:last-child) {
   margin-right: 10px;
-  transition: all 0.4s ease-in-out;
 }
-li:not(:nth-child(2)):hover {
+
+li:hover {
   display: inline-block;
-  padding-bottom: 2px;
-  border-bottom: #78e08f 2px solid;
-  transform: translateY(-5px);
+  color: #78e08f;
   cursor: pointer;
 }
+
 nav h4 {
   font-size: 25px;
   font-weight: 300;
@@ -84,11 +88,65 @@ article {
 }
 form {
   display: flex;
+  flex-direction: column;
   margin-left: 20px;
   margin-top: 20px;
 }
-.username__box input {
-  padding: 5px 20px;
+
+.username__box {
+  margin-bottom: 20px;
+}
+.username__box label {
+  width: 100px;
+}
+.username {
+  width: 250px;
+  padding: 2px 20px;
+  height: 40px;
   border: none;
-  border-radius: 30px;
+  border-radius: 15px;
+  outline: none;
+  margin-right: 20px;
+}
+
+.submit,
+.reset {
+  width: 120px;
+  padding: 2px 20px;
+  border: none;
+  border-radius: 15px;
+  outline: none;
+  height: 40px;
+  background-image: linear-gradient(to right bottom, #b8e994, #78e08f);
+  cursor: pointer;
+  text-transform: uppercase;
+  color: white;
+  margin-right: 10px;
+  transition: all 0.5s ease-in-out;
+}
+.submit:hover,
+.reset:hover {
+  transform: translateY(-4px);
+}
+.message__box label {
+  width: 80px;
+}
+
+.message__box textarea {
+  border: none;
+  border-radius: 15px;
+  outline: none;
+  font-family: "Work Sans", sans-serif;
+}
+.friend__box {
+  display: flex;
+}
+
+.friend__img {
+  background-image: url("https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80");
+  background-position: center;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
