@@ -60,7 +60,7 @@
                 </div>
                 <div class="message__box">
                     <label for="message"></label>
-                    <textarea name="message" id="message" cols="105" rows="30"></textarea>
+                    <textarea name="message" id="message" cols="65" rows="30"></textarea>
                 </div>
                 
             </form>

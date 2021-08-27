@@ -80,8 +80,9 @@ section {
 aside {
   width: 30%;
   background-color: white;
+  overflow: scroll;
+  padding: 10px 15px;
 }
-
 article {
   width: 70%;
   background-color: #f9f5f3;
@@ -100,6 +101,7 @@ form {
   width: 100px;
 }
 .username {
+  font-family: "Work Sans", sans-serif;
   width: 250px;
   padding: 2px 20px;
   height: 40px;
@@ -111,6 +113,7 @@ form {
 
 .submit,
 .reset {
+  font-family: "Work Sans", sans-serif;
   width: 120px;
   padding: 2px 20px;
   border: none;
@@ -133,10 +136,13 @@ form {
 }
 
 .message__box textarea {
+  box-sizing: border-box;
   border: none;
   border-radius: 15px;
   outline: none;
   font-family: "Work Sans", sans-serif;
+  font-size: 18px;
+  padding: 30px;
 }
 .friend__box {
   display: flex;

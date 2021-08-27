@@ -7,7 +7,7 @@
             die("Error : " . $e->getMessage());
         }
     
-        $response = $db->query("SELECT pseudo, message, DATE_FORMAT(message_sent_date, '%D/%M/%Y') AS french_date  FROM minichat ORDER BY id DESC LIMIT 0,10 ");
+        $response = $db->query("SELECT pseudo, message, DATE_FORMAT(message_sent_date, '%D %M %Y') AS french_date  FROM minichat ORDER BY id DESC LIMIT 0,15 ");
         $response->bindColumn('pseudo', $showName);
         $response->bindColumn('message', $showMessage);
         $response->bindColumn('french_date', $showDate);
